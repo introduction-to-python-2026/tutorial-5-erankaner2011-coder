@@ -3,7 +3,10 @@ import matplotlib.pyplot as plt
 def build_histogram(data):
     hist = {}
     for i in data:
-        hist[i] = hist.get(i, 0) + 1
+        if i not in  hist:
+            hist[i] = 1
+        else
+            hist[i] += 1
     return hist
 
 def plot_histogram(histogram):
